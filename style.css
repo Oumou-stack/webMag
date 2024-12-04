@@ -1,0 +1,159 @@
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+   box-shadow: 0px 11px 24px -10px rgba(66, 68, 90, 1);
+   padding: 11px 10px 11px 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.logo img{
+    width: 4vw;
+    height: 8vh;
+ }
+
+ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    gap: 45px;
+    
+ }
+
+ nav a{
+    text-decoration: none;
+ }
+
+.abonner-container{
+    display: flex;
+    column-gap: 5px;
+}
+
+
+.button{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: solid 2.5px #8005F2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+ }
+ 
+ .button:hover{
+    border: solid 2.5px #ba79f8;
+ }
+ 
+ .primary{
+    background: #8005f2;
+    color: white;
+ }
+ 
+ .primary:hover{
+    background: #ba79f8;
+ }
+
+.avatar{
+    width: 3vw;
+    height: 7vh;
+    border: solid 1px lightpink;
+    border-radius: 100%;
+    object-fit: cover;
+ }
+
+ header{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: lightpink;
+    color: white;
+ }
+
+ .presentation-container{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .mag-tittle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    margin-bottom: 40px;
+ }
+
+ .mag-themes{
+    display: flex;
+    gap: 50px;
+    padding: 0px 20px 0px 20px;
+ }
+
+ .mag-theme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .mag-theme p{
+    text-align: center;
+    margin-top: 5px;
+ }
+
+.banner{
+    height: 40vh;
+    
+}
+
+.hero{
+    height: 40vh;
+   
+}
+
+ .autres-articles-box{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .articles-container{
+    display: flex;
+    flex-direction: row;
+ }
+
+ .article-img-box img{
+    width: 40vw;
+    height: 40vh;
+ }
+
+ .article-txt-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+
+ footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: lightpink;
+    color: white;
+ }

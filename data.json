@@ -1,0 +1,96 @@
+{
+    "journal": {
+      "nomJournal": "L'Univers des Plantes et Fleurs",
+      "annee": "2024",
+      "phraseAccroche": "Découvrez la beauté et les secrets des plantes et des fleurs",
+      "texteAppelAction": "Abonnez-vous",
+      "texteAppelAction2": "Lire l'article",
+      "articlePrincipal": {
+        "titre": "Les plantes d'intérieur pour purifier l'air de votre maison",
+        "description": "Explorez les plantes qui apportent fraîcheur et bien-être à votre espace intérieur.",
+        "date": "1er Décembre 2024",
+        "theme": "Plantes d'intérieur",
+        "image": "images/image.png"
+      },
+      "banner":[
+        {
+        "description": "Bienvenus chez l'Univers des Plantes et Fleurs",
+        "image": "./images/pinkWaterFlowers.png"
+        }
+      ],
+      "articles": [
+        {
+          "titre": "Les fleurs de saison : Quelles variétés planter cet hiver ?",
+          "date": "28 Novembre 2024",
+          "theme": "Jardinage",
+          "image": "https://i.pinimg.com/736x/93/60/78/936078d4626aacc4cf65d5d6465f3982.jpg"
+        },
+        {
+          "titre": "Les bienfaits des plantes médicinales : Une tradition ancestrale",
+          "date": "20 Novembre 2024",
+          "theme": "Santé et bien-être",
+          "image": "images/image.png"
+        },
+        {
+          "titre": "Créer un mur végétal : Les astuces pour une décoration naturelle",
+          "date": "15 Novembre 2024",
+          "theme": "Décoration",
+          "image": "images/image.png"
+        },
+        {
+          "titre": "Les orchidées : Conseils pour les entretenir et les faire refleurir",
+          "date": "10 Novembre 2024",
+          "theme": "Plantes d'intérieur",
+          "image": "images/image.png"
+        },
+        {
+          "titre": "Les fleurs dans l'art et la culture : Une source d'inspiration intemporelle",
+          "date": "5 Novembre 2024",
+          "theme": "Culture et histoire",
+          "image": "images/image.png"
+        }
+      ],
+      "themes": [
+        {
+          "nom": "Plantes d'intérieur",
+          "description": "Apprenez à sélectionner et à entretenir des plantes pour embellir votre maison."
+        },
+        {
+          "nom": "Jardinage",
+          "description": "Des conseils pour planter et cultiver des fleurs et plantes dans votre jardin."
+        },
+        {
+          "nom": "Santé et bien-être",
+          "description": "Découvrez comment les plantes et fleurs contribuent à votre santé et votre équilibre."
+        },
+        {
+          "nom": "Décoration",
+          "description": "Inspirez-vous pour intégrer des plantes et des fleurs dans votre décoration intérieure."
+        },
+        {
+          "nom": "Culture et histoire",
+          "description": "Explorez le rôle des plantes et des fleurs dans l'art, les traditions et les croyances."
+        }
+      ],
+      "equipe": [
+        {
+          "prenom": "Marie",
+          "metier": "Horticultrice",
+          "presentation": "Spécialiste des plantes et fleurs, je partage mes conseils pour les cultiver et les entretenir.",
+          "image": "https://i.pinimg.com/736x/93/29/eb/9329eb08e80befec633ad516e037e9bc.jpg"
+        },
+        {
+          "prenom": "Thomas",
+          "metier": "Paysagiste",
+          "presentation": "Je crée des jardins harmonieux en combinant esthétisme et respect de la nature.",
+          "image": "https://i.pinimg.com/736x/b0/b8/36/b0b836166e5d1e215f3ca4e96989fc55.jpg"
+        },
+        {
+          "prenom": "Léa",
+          "metier": "Historienne de l'art",
+          "presentation": "Je décrypte l'importance des plantes et des fleurs dans l'art et la culture à travers les âges.",
+          "image": "https://i.pinimg.com/736x/18/c2/96/18c29680423dc8ec13e290b7bd9917a5.jpg"
+        }
+      ]
+    }
+  }
