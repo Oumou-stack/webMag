@@ -3,6 +3,11 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2{
+   
 }
 
 nav{
@@ -128,7 +133,11 @@ ul{
    
 }
 
- .autres-articles-box{
+#last-article-box{
+   display: flex;
+}
+
+ #autres-articles-box{
     display: flex;
     flex-direction: column;
  }

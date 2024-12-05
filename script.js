@@ -27,10 +27,12 @@ function getData() {
       
       afficherNav(data);
       afficherHeader(data);
+      afficherBanner(data);
       afficherLastArticle(data);
       afficherArticles(data);
       afficherEquipe(data);
       afficherFooter(data);
+      
 
        /// FIN DU CODE
      })
@@ -78,7 +80,7 @@ function getData() {
       // let journalTheme = themes.nom;
       // console.log(journalTheme);
 
-      console.log(themes);
+      // console.log(themes);
       
       let themesList = " ";
 
@@ -101,12 +103,20 @@ function getData() {
       let conteneur = document.getElementById('header');
       conteneur.insertAdjacentHTML('beforeend', contenuHeader);
     }
-function afficheBanner(data) {
+
+function afficherBanner(data) {
   let journal = data.journal;
   let banner = journal.banner;
-  let image = journal.banner[0].image;
-  let bannerDescription = journal.banner[0].description;
+  let image = banner[0].image;
+  let bannerDescription = banner[0].description;
+  console.log(journal);
 
+  let heroBanner = `<div class="hero">
+            <img src"${image}">
+            <h2>${bannerDescription}</h2>
+         </div>`;
+
+        //  console.log(heroBanner);
   // let bannerContenu = "";
 
   // bannerImage += `<img src=${image}> <h2>${bannerDescription}</h2>`;
@@ -115,10 +125,11 @@ function afficheBanner(data) {
   // bannerContenu = ` <div class="hero">
   //          ${bannerImage}
   //        </div>`
+
   let conteneur = document.getElementById('banner');
-  console.log(conteneur);
-    
-  conteneur.insertAdjacentHTML('beforeend', bannerContenu);
+  
+    conteneur.insertAdjacentHTML('beforeend', heroBanner);
+  
 }
 
   function afficherLastArticle(data) {
@@ -130,13 +141,15 @@ function afficheBanner(data) {
       let descriptionArticleRecent = articlePrincipal.description;
       let lireArticle = journal.texteAppelAction2;
       let articleRecent = 
-      `<div class="article-name">
+      `<div class="article-text-bloc">
          <h4>Article le plus récent</h4>
+         <div class="article-description">
          <h5>${titreArticleRecent}</h5>
          <p>${themeArticleRecent} - ${dateArticleRecent}</p>
-      </div>
-      <div class="article-description">
          <p>${descriptionArticleRecent}</p>
+         </div>
+      </div>
+      <div class="article-image">
          <img src = "https://i.pinimg.com/736x/af/7c/41/af7c41abe1bd0e635d247e93fede05f9.jpg">
       </div>
       <div class="button-container">
@@ -248,7 +261,7 @@ function afficherFooter(data) {
 // console.log(nomJournal, annee);
 
 let journalFooter = `${nomJournal} ${annee}`;
-console.log(journalFooter);
+// console.log(journalFooter);
 
   // let journalFooter = `<footer id = "footer"><p>${nomJournal} ${annee}</p></footer>`;
 
