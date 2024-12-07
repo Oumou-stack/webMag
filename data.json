@@ -1,53 +1,71 @@
 {
     "journal": {
-      "nomJournal": "L'Univers des Plantes et Fleurs",
+      "nomJournal": "Les Pollinisateurs",
       "annee": "2024",
       "phraseAccroche": "Découvrez la beauté et les secrets des plantes et des fleurs",
       "texteAppelAction": "Abonnez-vous",
       "texteAppelAction2": "Lire l'article",
+      "texteAppelAction3": "Contactez-Nous",
+      "logo": "images/logoWebMag.png",
+      "avatar":"images/avatarLogin.png",
+      "reseaux": [
+        {
+          "nom": "instagram",
+          "link": "https://www.instagram.com/"
+        },
+        {
+          "nom": "tiktok",
+          "link": "https://www.tiktok.com/discover/tiktok-francais?lang=fr"
+        },
+        {
+          "nom": "facebook",
+          "link": "https://www.facebook.com/?locale=fr_FR"
+        }
+
+      ],
       "articlePrincipal": {
         "titre": "Les plantes d'intérieur pour purifier l'air de votre maison",
         "description": "Explorez les plantes qui apportent fraîcheur et bien-être à votre espace intérieur.",
         "date": "1er Décembre 2024",
         "theme": "Plantes d'intérieur",
-        "image": "images/image.png"
+        "image": "images/Book.jpg"
       },
-      "banner":[
-        {
-        "description": "Bienvenus chez l'Univers des Plantes et Fleurs",
-        "image": "./images/pinkWaterFlowers.png"
-        }
-      ],
+      
       "articles": [
         {
           "titre": "Les fleurs de saison : Quelles variétés planter cet hiver ?",
           "date": "28 Novembre 2024",
           "theme": "Jardinage",
-          "image": "https://i.pinimg.com/736x/93/60/78/936078d4626aacc4cf65d5d6465f3982.jpg"
+          "image": "images/Rose de Noël - Mon Jardin & ma maison.png",
+          "description":"Découvrez les fleurs qui résistent au froid et apportent une touche de couleur à vos jardins en hiver. Nos conseils pour des plantations réussies !"
         },
         {
           "titre": "Les bienfaits des plantes médicinales : Une tradition ancestrale",
           "date": "20 Novembre 2024",
           "theme": "Santé et bien-être",
-          "image": "images/image.png"
+          "image": "images/phytotherapie.png",
+          "description":"Plongez dans les secrets des plantes médicinales et leurs vertus pour la santé, héritées de traditions millénaires à travers le monde."
         },
         {
           "titre": "Créer un mur végétal : Les astuces pour une décoration naturelle",
           "date": "15 Novembre 2024",
           "theme": "Décoration",
-          "image": "images/image.png"
+          "image": "images/murVegetal.png",
+          "description":"Ajoutez une touche de verdure à vos murs avec nos astuces pour créer un mur végétal élégant et facile à entretenir."
         },
         {
           "titre": "Les orchidées : Conseils pour les entretenir et les faire refleurir",
           "date": "10 Novembre 2024",
           "theme": "Plantes d'intérieur",
-          "image": "images/image.png"
+          "image": "images/orchidées.png",
+          "description":"Les orchidées n'auront plus de secrets pour vous ! Découvrez nos conseils pour les garder éclatantes et les faire refleurir."
         },
         {
           "titre": "Les fleurs dans l'art et la culture : Une source d'inspiration intemporelle",
           "date": "5 Novembre 2024",
           "theme": "Culture et histoire",
-          "image": "images/image.png"
+          "image": "images/plantesCulture.png",
+          "description":"De la peinture à la poésie, les fleurs fascinent les artistes depuis toujours. Explorez leur rôle dans l'art et les traditions culturelles."
         }
       ],
       "themes": [
@@ -74,22 +92,53 @@
       ],
       "equipe": [
         {
-          "prenom": "Marie",
+          "prenom": "Oumou",
           "metier": "Horticultrice",
           "presentation": "Spécialiste des plantes et fleurs, je partage mes conseils pour les cultiver et les entretenir.",
-          "image": "https://i.pinimg.com/736x/93/29/eb/9329eb08e80befec633ad516e037e9bc.jpg"
+          "image": "images/oumou.jpeg",
+          "reseaux": [
+            {
+              "nom": "gitHub",
+              "link": "https://github.com/Oumou-stack"
+            },
+            {
+              "nom": "linkedin",
+              "link": "https://www.linkedin.com/in/oumou-bathily/"
+            }
+            ]
         },
         {
-          "prenom": "Thomas",
+          "prenom": "Moana",
           "metier": "Paysagiste",
           "presentation": "Je crée des jardins harmonieux en combinant esthétisme et respect de la nature.",
-          "image": "https://i.pinimg.com/736x/b0/b8/36/b0b836166e5d1e215f3ca4e96989fc55.jpg"
+          "image": "images/moana.jpeg",
+          "reseaux": [
+            {
+              "nom": "gitHub",
+              "link": "https://github.com/mariefrancelng"
+            },
+            {
+              "nom": "linkedin",
+              "link": "www.linkedin.com/in/oumou-bathily"
+            }
+            ]
         },
         {
-          "prenom": "Léa",
+          "prenom": "Marie",
           "metier": "Historienne de l'art",
           "presentation": "Je décrypte l'importance des plantes et des fleurs dans l'art et la culture à travers les âges.",
-          "image": "https://i.pinimg.com/736x/18/c2/96/18c29680423dc8ec13e290b7bd9917a5.jpg"
+          "image": "images/marie.jpeg",
+          "reseaux": [
+            {
+              "nom": "gitHub",
+              "link": "https://github.com/mariefrancelng"
+            },
+            {
+              "nom": "linkedin",
+              "link": "https://www.linkedin.com/in/marie-france-lunganga/"
+            }
+          
+          ]
         }
       ]
     }

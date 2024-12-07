@@ -10,24 +10,23 @@ function getData() {
        // Traitez les données comme vous le souhaitez
        console.log('Données récupérées du fichier JSON :', data);
        /// ON ECRIT LE CODE ICI !
-      let journal = data.journal;
-      let nomJournal = journal.nomJournal;
+      // let journal = data.journal;
+      // let nomJournal = journal.nomJournal;
       // console.log(nomJournal);
       
-      let themes = journal.themes;
+      // let themes = journal.themes;
       
-      let journalTheme = themes.nom;
-      // console.log(journalTheme); 
+      // let journalTheme = themes.nom;
+      // // console.log(journalTheme); 
 
-      let description = themes.description;
-      // console.log(description);
+      // let description = themes.description;
+      // // console.log(description);
 
-      let phraseAccroche = journal.phraseAccroche;
-      // console.log(phraseAccroche);
+      // let phraseAccroche = journal.phraseAccroche;
+      // // console.log(phraseAccroche);
       
       afficherNav(data);
       afficherHeader(data);
-      afficherBanner(data);
       afficherLastArticle(data);
       afficherArticles(data);
       afficherEquipe(data);
@@ -45,9 +44,10 @@ function getData() {
 
   function afficherNav(data) {
     let journal = data.journal;
-    let nomJournal = data.journal.nomJournal;
+    let logoJournal = journal.logo;
     let abonnezVous = journal.texteAppelAction;
     let themes = journal.themes;
+    let avatar = journal.avatar;
     let themesList = "";
     // console.log(journalTheme);
 
@@ -57,15 +57,14 @@ function getData() {
 
     let contenuNav =
     `<div class="logo">
-      <img src="./images/logo.svg">
-      <h2>${nomJournal}</h2>
+      <img src="${logoJournal}" alt="logo les pollinisateurs">
     </div>
       <ul id = "themesList">
           ${themesList}
       </ul>
-    <div class="abonner-container">
+    <div class="abonné-container">
       <a class="button primary" target="_blank" href="#">${abonnezVous}</a>
-      <img class="avatar" src="images/avatar.jpg" alt="avatar chien cool">
+      <img class="avatar" src="${avatar}" alt="avatar abonné">
     </div>`;
       let conteneur = document.getElementById('nav');
       conteneur.insertAdjacentHTML('beforeend', contenuNav);
@@ -91,8 +90,8 @@ function getData() {
       let contenuHeader =
     `<div class = "presentation-container" >
       <div class="mag-tittle">
-         <h2>${nomJournal}</h2>
-         <h3>${phraseAccroche}</h3>
+         <h2 data-aos="fade-right" data-aos-duration="1500">${nomJournal}</h2>
+         <h3 data-aos="fade-left" data-aos-duration="1500">${phraseAccroche}</h3>
       </div>
       <div class="mag-themes">
           ${themesList}   
@@ -104,57 +103,40 @@ function getData() {
       conteneur.insertAdjacentHTML('beforeend', contenuHeader);
     }
 
-function afficherBanner(data) {
-  let journal = data.journal;
-  let banner = journal.banner;
-  let image = banner[0].image;
-  let bannerDescription = banner[0].description;
-  console.log(journal);
-
-  let heroBanner = `<div class="hero">
-            <img src"${image}">
-            <h2>${bannerDescription}</h2>
-         </div>`;
-
-        //  console.log(heroBanner);
-  // let bannerContenu = "";
-
-  // bannerImage += `<img src=${image}> <h2>${bannerDescription}</h2>`;
-  // console.log(banner);  
-
-  // bannerContenu = ` <div class="hero">
-  //          ${bannerImage}
-  //        </div>`
-
-  let conteneur = document.getElementById('banner');
-  
-    conteneur.insertAdjacentHTML('beforeend', heroBanner);
-  
-}
-
   function afficherLastArticle(data) {
       let journal = data.journal;
       let articlePrincipal = journal.articlePrincipal;
-      let titreArticleRecent = articlePrincipal.titre;
-      let dateArticleRecent = articlePrincipal.date;
-      let themeArticleRecent = articlePrincipal.theme;
-      let descriptionArticleRecent = articlePrincipal.description;
+      let image = articlePrincipal.image;
+      console.log(image);
+      // let image = articlePrincipal.image;
+      // let titreArticleRecent = articlePrincipal.titre;
+      // let dateArticleRecent = articlePrincipal.date;
+      // let themeArticleRecent = articlePrincipal.theme;
+      // let descriptionArticleRecent = articlePrincipal.description;
       let lireArticle = journal.texteAppelAction2;
+      
       let articleRecent = 
-      `<div class="article-text-bloc">
-         <h4>Article le plus récent</h4>
-         <div class="article-description">
-         <h5>${titreArticleRecent}</h5>
-         <p>${themeArticleRecent} - ${dateArticleRecent}</p>
-         <p>${descriptionArticleRecent}</p>
-         </div>
-      </div>
-      <div class="article-image">
-         <img src = "https://i.pinimg.com/736x/af/7c/41/af7c41abe1bd0e635d247e93fede05f9.jpg">
-      </div>
-      <div class="button-container">
-         <a class="button primary" target="_blank" href="#">${lireArticle}</a>
-       </div>`;
+      `<h4 class="tittle" data-aos="fade-right" data-aos-duration="1500">Article le plus récent</h4>
+          <img data-aos="fade-left" data-aos-duration="1500" src="${image}" alt="image dernier article plantes d'interieur">
+        
+        <div class="button-container">
+            <a class="button primary" target="_blank" href="#">${lireArticle}</a>
+          </div>`;
+      // `
+      // <img src="${image}">
+      // <div class="article-text-bloc">
+      //    <h4 class="tittle">Article le plus récent</h4>
+      //    <div class="article-tittle">
+      //       <h5>${titreArticleRecent}</h5>
+      //       <h6>${themeArticleRecent} - ${dateArticleRecent}</h6>
+      //     </div>
+      //    <div class="article-description">
+      //     <p>${descriptionArticleRecent}</p>
+      //    </div>
+      // </div>
+      // <div class="button-container">
+      //    <a class="button primary" target="_blank" href="#">${lireArticle}</a>
+      //  </div>`;
     
        let conteneur = document.getElementById('last-article-box');
       //  console.log(conteneur);
@@ -176,31 +158,32 @@ function afficherBanner(data) {
         let dateArticle = article.date;
         let themeArticle = article.theme;
         let imageArticle = article.image;
+        let description = article.description;
 
         articleList += `   
-            <img src = "${imageArticle}">
-         <div class="article-txt-box">
-            <div class="article-name">
-               <h4>${titreArticle}</h4>
-               <p>${themeArticle} - ${dateArticle}</p>
+         <div class="article-card">
+            <div class="article-image">
+              <img src= "${imageArticle}" alt="image de l'article">
             </div>
-            <div class="article-description">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio suscipit deserunt delectus quo, accusamus ad. Optio, rem repudiandae. Mollitia hic fugit harum? Odit sed in numquam ipsa, porro dolore maxime?</p>
-            </div>`
+            <div id="article">
+              <div class="article-tittle">
+                <h5>${titreArticle}</h5>
+                <h6>${themeArticle} - ${dateArticle}</h6>
+              </div>
+              <div class="article-description">
+                <p>${description}</p>
+                <a class="button primary" target="_blank" href="#">${lireArticle}</a>
+              </div>
+            </div>
+          </div>`
         });
         
         
         let articleCard =
-        `<h3>Autres articles</h3>
-      <div class="articles-container">
-      <div class="article-img-box">
-      ${articleList}
-      </div>
-            <div class="button-container">
-               <a class="button primary" target="_blank" href="#">${lireArticle}</a>
-             </div>
-         </div>
-      </div>`;
+        `<h4 class="tittle" data-aos="fade-right" data-aos-duration="1500">Autres articles</h4>
+          <div class="articles-container">
+          ${articleList}
+          </div>`;
 
       let conteneur = document.getElementById('autres-articles-box');
       // console.log(conteneur);
@@ -212,46 +195,61 @@ function afficherBanner(data) {
     
 function afficherEquipe(data) {
   let journal = data.journal;
-  let equipe = data.journal.equipe;
-  // console.log(equipe);
+  let equipe = journal.equipe;
   
-  let equipeList = " ";
 
   equipe.forEach(collegue => {
     let nomCollegue = collegue.prenom;
     // console.log(nomCollegue);
     
     let metierCollegue = collegue.metier;
-    // console.log(metierCollegue);
+    //console.log(metierCollegue);
     
     let presentationCollegue = collegue.presentation;
-    // console.log(presentationCollegue);
+    //console.log(presentationCollegue);
     
     let photoCollegue = collegue.image;
-    // console.log();
+    //console.log();
     
+    let gitHub = collegue.reseaux[0].link;
+    // console.log(gitHub);
+    let linkedin = collegue.reseaux[1].link;
+    // console.log(linkedin);
 
-    equipeList += `<img class="avatar" src="${photoCollegue}" alt="${nomCollegue}">
-      <h5>${nomCollegue}</h5>
-      <h6>${metierCollegue}</h6>
+    let equipeList = 
+    `<div class="equipe-card" data-aos="zoom-in" data-aos-duration="1500">
+        <img class="avatar" src="${photoCollegue}" alt="avatar ${nomCollegue}">
+        <h5>${nomCollegue}</h5>
+        <h6>${metierCollegue}</h6>
         <p>${presentationCollegue}</p>
-    `;
-
-      // console.log(equipeList);
-      
-  });
-        
-    let equipeCard =
-    `<h3>Découvrez notre équipe</h3>
-      <div class="equipe-cards">
-        <div class = "equipe-card">
-          ${equipeList}
+        <div class="socials-container">
+         <div class="socials">
+            <a href="${gitHub}" target="_blank" >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="${linkedin}" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+         </div>
         </div>
-      </div>`;
+    </div>`;
 
-    let conteneur = document.getElementById('equipe-box');
-      // console.log(conteneur);
-      conteneur.insertAdjacentHTML('beforeend', equipeCard);
+    // console.log(equipeList);
+    let conteneur = document.getElementById('equipe-cards');
+  conteneur.insertAdjacentHTML('beforeend', equipeList);
+  
+
+  });
+  // let equipeList = `${equipeList}`;
+
+  // let equipeCardsContainer = 
+  //       ` <div class="equipe-cards">
+  //         ${equipeList}
+  //         </div>`;
+  let conteneur = document.getElementById('equipe-box');
+  let conteneurTittle = `<h5 class="tittle" data-aos="fade-right" data-aos-duration="1500">Découvrez notre équipe</h5>`;
+  // console.log(conteneurTittle);
+  conteneur.insertAdjacentHTML('afterbegin', conteneurTittle);
 }
 
 function afficherFooter(data) {
@@ -259,11 +257,34 @@ function afficherFooter(data) {
   let nomJournal = journal.nomJournal;
   let annee = journal.annee;
 // console.log(nomJournal, annee);
+  let instagram = journal.reseaux[0].link;
+    // console.log(instagram);
+  let tiktok = journal.reseaux[1].link;
+    // console.log(tiktok);
+  let facebook = journal.reseaux[2].link;
+    // console.log(facebook);
 
-let journalFooter = `${nomJournal} ${annee}`;
-// console.log(journalFooter);
+    let contact = journal.texteAppelAction3;
 
-  // let journalFooter = `<footer id = "footer"><p>${nomJournal} ${annee}</p></footer>`;
+let journalFooter = 
+`<h5>${nomJournal} - ${annee}</h5>
+      <div class="socials-container">
+         <div class="socials">
+             <a href="${instagram}" target="_blank">
+                 <i class="fa-brands fa-instagram"></i>
+             </a>
+             <a href="${tiktok}" target="_blank">
+                 <i class="fa-brands fa-tiktok"></i>
+             </a>
+             <a href="${facebook}" target="_blank">
+                 <i class="fa-brands fa-facebook"></i>
+             </a>
+         </div>
+     </div>
+     <div class="contact-box">
+         <a class="button primary" href="bathily.oumou2103@gmail.com" target="_blank">${contact}</a>
+     </div>`;
+console.log(journalFooter);
 
   let conteneur = document.getElementById('footer');
   // console.log(conteneur);
