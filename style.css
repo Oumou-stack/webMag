@@ -7,6 +7,7 @@ body{
    font-size: 16px;
    color: black;
    background: #FFFCF4;
+   cursor: default;
    }
 
 h5{
@@ -174,7 +175,6 @@ header h3{
    border-radius: 10px;
    background-color: #efddc52f;
    transition: all 0.5s ease;
-   cursor: default;
 }
 
 #last-article-box{
@@ -360,4 +360,70 @@ footer .fa-brands{
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    transition: all 0.5s ease-in-out;
+ }
+
+ #scrollTopBtn {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   display: none;
+   background: linear-gradient(#F9E3A2, #E6C560);
+   color: #947e32;
+   border: none;
+   border-radius: 50%;
+   padding: 10px 15px;
+   font-size: 20px;
+   
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ #scrollTopBtn:hover {
+   background: linear-gradient(180deg, #F9E3A2 0%, #E6C560 64.67%);
+   color: white;
+ }
+
+ .hidden {
+   display: none;
+ }
+
+ #contactFormContainer {
+   position: fixed;
+   width: 40vw;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+   background-size: 200% 200%;
+   border: 1px solid #947e32;
+   padding: 20px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   z-index: 1000;
+   animation: gradientAnimation 8s ease infinite; 
+   border-radius: 10px; 
+   color: black;
+ }
+ 
+ @keyframes gradientAnimation {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
+ #contactForm {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ #contactForm label {
+   margin: 10px 0 5px;
+ }
+ 
+ #contactForm input, #contactForm textarea, #contactForm button {
+   margin-bottom: 15px;
  }

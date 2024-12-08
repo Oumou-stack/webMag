@@ -31,6 +31,9 @@ function getData() {
       afficherArticles(data);
       afficherEquipe(data);
       afficherFooter(data);
+      afficherBouton();
+      ajouterFormulaire();
+      afficherFormulaire();
       
 
        /// FIN DU CODE
@@ -282,7 +285,7 @@ let journalFooter =
          </div>
      </div>
      <div class="contact-box">
-         <a class="button primary" href="bathily.oumou2103@gmail.com" target="_blank">${contact}</a>
+         <a id="contactFooterBtn" class="button primary">${contact}</a>
      </div>`;
 console.log(journalFooter);
 
@@ -291,3 +294,69 @@ console.log(journalFooter);
   
   conteneur.insertAdjacentHTML('beforeend', journalFooter);
 }
+
+function afficherBouton() {
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+}
+
+function ajouterFormulaire() {
+  let formulaire = `<div id="contactFormContainer" class="hidden">
+    <form id="contactForm">
+      <h2>Contactez-nous</h2>
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+      <button type="button" id="hideFormBtn">Fermer</button>
+    </form>
+  </div>`;
+  document.body.insertAdjacentHTML('beforeend', formulaire);
+}
+
+function afficherFormulaire() {
+  let showFormBtn = document.getElementById('showFormBtn');
+  let footerContactBtn = document.getElementById('contactFooterBtn');
+  let hideFormBtn = document.getElementById('hideFormBtn');
+  let contactFormContainer = document.getElementById('contactFormContainer');
+
+  if (showFormBtn) {
+    showFormBtn.addEventListener('click', () => {
+      contactFormContainer.classList.remove('hidden');
+    });
+  }
+
+  if (footerContactBtn) {
+    footerContactBtn.addEventListener('click', () => {
+      contactFormContainer.classList.remove('hidden');
+    });
+  }
+
+  if (hideFormBtn) {
+    hideFormBtn.addEventListener('click', () => {
+      contactFormContainer.classList.add('hidden');
+    });
+  }
+}
+
